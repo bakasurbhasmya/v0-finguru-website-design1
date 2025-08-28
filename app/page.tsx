@@ -280,75 +280,124 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Card className="bg-card/80 backdrop-blur-sm border border-border/50 shadow-lg hover:bg-card/90 hover:border-border/70 transition-all duration-300">
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                    <Users className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <CardTitle className="font-serif">MBA Marketing Internship</CardTitle>
-                    <Badge variant="secondary" className="mt-1">
-                      Client Acquisition
-                    </Badge>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base mb-6">
-                  Join our marketing team to develop client acquisition strategies, build relationships with potential
-                  traders, and grow our community of financial learners.
-                </CardDescription>
-                <ul className="text-sm text-muted-foreground mb-6 space-y-2">
-                  <li>• Lead generation and client outreach</li>
-                  <li>• Digital marketing campaigns</li>
-                  <li>• Market research and analysis</li>
-                  <li>• Brand development initiatives</li>
-                </ul>
-                <Link href="/contact">
-                  <Button className="w-full bg-primary hover:bg-primary/90">
-                    Apply Now
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
 
-            <Card className="bg-card/80 backdrop-blur-sm border border-border/50 shadow-lg hover:bg-card/90 hover:border-border/70 transition-all duration-300">
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center">
-                    <BookOpen className="h-6 w-6 text-secondary" />
-                  </div>
-                  <div>
-                    <CardTitle className="font-serif">MBA Finance Internship</CardTitle>
-                    <Badge variant="secondary" className="mt-1">
-                      Training & Advisory
-                    </Badge>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base mb-6">
-                  Work directly with our training team to develop course content, assist in student mentoring, and
-                  provide financial advisory services to our clients.
-                </CardDescription>
-                <ul className="text-sm text-muted-foreground mb-6 space-y-2">
-                  <li>• Course content development</li>
-                  <li>• Student mentoring and support</li>
-                  <li>• Financial analysis and research</li>
-                  <li>• Advisory service delivery</li>
-                </ul>
-                <Link href="/contact">
-                  <Button className="w-full bg-secondary hover:bg-secondary/90">
-                    Apply Now
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-          </div>
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto px-4">
+  {/* Card 1 - Marketing Internship */}
+  <Card className="group relative bg-gradient-to-br from-card/95 to-card/80 backdrop-blur-sm border border-border/50 shadow-xl hover:shadow-2xl hover:border-primary/30 transition-all duration-500 flex flex-col h-full overflow-hidden">
+    {/* Subtle background pattern */}
+    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    
+    <CardHeader className="flex-shrink-0 pb-4 relative z-10">
+      <div className="flex items-start gap-4">
+        <div className="w-14 h-14 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+          <Users className="h-7 w-7 text-green-600" />
+        </div>
+        <div className="flex-1">
+          <CardTitle className="font-serif text-xl mb-2 text-foreground group-hover:text-primary transition-colors duration-300">
+            MBA Marketing Internship
+          </CardTitle>
+          <Badge variant="secondary" className="bg-green-500/10 text-green-700 border-green-500/20 hover:bg-green-500/20 transition-colors duration-300">
+            Client Acquisition
+          </Badge>
+        </div>
+      </div>
+    </CardHeader>
+    
+    <CardContent className="flex flex-col flex-grow relative z-10 pt-2">
+      <CardDescription className="text-base leading-relaxed mb-8 flex-shrink-0 text-muted-foreground">
+        Join our marketing team to develop client acquisition strategies, build relationships with potential
+        traders, and grow our community of financial learners.
+      </CardDescription>
+      
+      <div className="flex-grow mb-8">
+        <h4 className="font-semibold text-sm text-foreground mb-4 opacity-80">Key Responsibilities</h4>
+        <ul className="space-y-3">
+          <li className="flex items-start gap-3 text-sm text-muted-foreground">
+            <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+            <span>Lead generation and client outreach</span>
+          </li>
+          <li className="flex items-start gap-3 text-sm text-muted-foreground">
+            <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+            <span>Digital marketing campaigns</span>
+          </li>
+          <li className="flex items-start gap-3 text-sm text-muted-foreground">
+            <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+            <span>Market research and analysis</span>
+          </li>
+          <li className="flex items-start gap-3 text-sm text-muted-foreground">
+            <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+            <span>Brand development initiatives</span>
+          </li>
+        </ul>
+      </div>
+      
+      <Link href="/contact" className="mt-auto flex-shrink-0">
+        <Button className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white shadow-lg hover:shadow-xl group-hover:scale-105 transition-all duration-300">
+          Apply Now
+          <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+        </Button>
+      </Link>
+    </CardContent>
+  </Card>
+
+  {/* Card 2 - Finance Internship */}
+  <Card className="group relative bg-gradient-to-br from-card/95 to-card/80 backdrop-blur-sm border border-border/50 shadow-xl hover:shadow-2xl hover:border-primary/30 transition-all duration-500 flex flex-col h-full overflow-hidden">
+    {/* Subtle background pattern */}
+    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    
+    <CardHeader className="flex-shrink-0 pb-4 relative z-10">
+      <div className="flex items-start gap-4">
+        <div className="w-14 h-14 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+          <BookOpen className="h-7 w-7 text-blue-600" />
+        </div>
+        <div className="flex-1">
+          <CardTitle className="font-serif text-xl mb-2 text-foreground group-hover:text-primary transition-colors duration-300">
+            MBA Finance Internship
+          </CardTitle>
+          <Badge variant="secondary" className="bg-blue-500/10 text-blue-700 border-blue-500/20 hover:bg-blue-500/20 transition-colors duration-300">
+            Training & Advisory
+          </Badge>
+        </div>
+      </div>
+    </CardHeader>
+    
+    <CardContent className="flex flex-col flex-grow relative z-10 pt-2">
+      <CardDescription className="text-base leading-relaxed mb-8 flex-shrink-0 text-muted-foreground">
+        Work directly with our training team to develop course content, assist in student mentoring, and 
+        provide financial advisory services to our clients.
+      </CardDescription>
+      
+      <div className="flex-grow mb-8">
+        <h4 className="font-semibold text-sm text-foreground mb-4 opacity-80">Key Responsibilities</h4>
+        <ul className="space-y-3">
+          <li className="flex items-start gap-3 text-sm text-muted-foreground">
+            <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+            <span>Course content development</span>
+          </li>
+          <li className="flex items-start gap-3 text-sm text-muted-foreground">
+            <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+            <span>Student mentoring and support</span>
+          </li>
+          <li className="flex items-start gap-3 text-sm text-muted-foreground">
+            <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+            <span>Financial analysis and research</span>
+          </li>
+          <li className="flex items-start gap-3 text-sm text-muted-foreground">
+            <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+            <span>Advisory service delivery</span>
+          </li>
+        </ul>
+      </div>
+      
+      <Link href="/contact" className="mt-auto flex-shrink-0">
+        <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl group-hover:scale-105 transition-all duration-300">
+          Apply Now
+          <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+        </Button>
+      </Link>
+    </CardContent>
+  </Card>
+</div>
         </div>
       </section>
 
